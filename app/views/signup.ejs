@@ -1,0 +1,25 @@
+<% include header %>
+
+  <h1><%- title %></h1>
+
+  <form action="/signup" method="post">
+
+    <label for="name">Name </label>
+    <input type="text" name="name" id="name">
+
+    <label for="lastname">Lastname </label>
+    <input type="text" name="lastname" id="lastname">
+
+    <label for="username">Username </label>
+    <input type="text" name="username" id="username">
+
+    <label for="password">Password </label>
+    <input type="password" name="password" id="password">
+
+    <input type="submit" value="Registrame">
+  </form>
+
+
+
+
+<% include footer %>

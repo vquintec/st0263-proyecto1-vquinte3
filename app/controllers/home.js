@@ -23,7 +23,7 @@ router.post('/new-article', function (req, res, next) {
     url: req.body.url,
     text: req.body.text
   });
-
+  console.log(newArticle.date);
   newArticle.save(function(err) {
     if (err)
       res.send(err);
