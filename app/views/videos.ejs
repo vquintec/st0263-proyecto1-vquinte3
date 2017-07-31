@@ -1,0 +1,29 @@
+<% include header %>
+
+  <h1><%-title %></h1>
+  <a href="/my-videos">My videos</a>
+  <a href="/upload-video">Upload video</a>
+
+
+  <form action="/search" method="get">
+    <input type="text" name="query" placeholder="Search..."/>
+    <input type="submit" value="Search" />
+  </form>
+
+  <table border="1">
+    <tr>
+      <td>Titulo</td>
+      <td>Descripción</td>
+      <td>Categoria</td>
+    </tr>
+  <% videos.forEach(function (video) { %>
+    <tr>
+      <td><%- video.title %></td>
+      <td><%- video.description %></td>
+      <td><%- video.category %></td>
+    </tr>
+  <% }); %>
+  </table>
+
+
+<% include footer %>

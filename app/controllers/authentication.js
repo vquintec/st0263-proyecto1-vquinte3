@@ -51,7 +51,7 @@ router.post('/login', function (req, res, next) {
     if(user == null)
       res.redirect('/login?error');
     else
-      res.redirect('/home');
+      res.redirect('/videos');
 
   });
 });

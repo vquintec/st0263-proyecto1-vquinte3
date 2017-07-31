@@ -1,0 +1,28 @@
+<% include header %>
+
+<h1><%-title %></h1>
+<a href="/videos">Videos</a>
+
+<form action="/edit-video" method="post">
+
+  <input type="text" name="idVideo" value="<%- video._id %>" hidden >
+
+  <label for="title">Title </label>
+  <input type="text" name="title" id="title" value="<%- video.title %>">
+  <br>
+  <label for="description">Description </label>
+  <input type="text" name="description" id="description" value="<%- video.description %>">
+  <br>
+  <label for="category">Category </label>
+  <input type="text" name="category" id="category" value="<%- video.category %>">
+  <br>
+  <label for="tags">Tags </label>
+  <input type="text" name="tags" id="tags" value="<%- video.tags %>">
+  <br>
+  <label for="username">Username </label>
+  <input type="text" name="username" id="username" value="<%- video.username %>">
+  <br>
+  <input type="submit" value="Edit">
+</form>
+
+<% include footer %>
