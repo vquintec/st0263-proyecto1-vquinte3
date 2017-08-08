@@ -10,7 +10,7 @@ module.exports = function (app) {
 router.get('/signup', function (req, res, next) {
   res.render('signup', {
     title: "Sign Up",
-    baseUrl: config.baseUrl
+    baseUrl: '/vquinte3/'
   });
 });
 
@@ -37,13 +37,13 @@ router.get('/login', function (req, res, next) {
     res.render('login', {
       title: 'Log In',
       error: '',
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     });
   else
     res.render('login' ,{
       title: 'Log In',
       error: 'Bad Credentials',
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     })
 });
 

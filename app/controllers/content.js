@@ -13,7 +13,7 @@ router.get('/videos', function (req, res, next) {
     res.render('videos', {
       title: 'Videos',
       videos: videos,
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     });
   });
 });
@@ -24,7 +24,7 @@ router.get('/search', function (req, res, next) {
     res.render('videos', {
       title: 'Videos',
       videos: videos,
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     });
   });
 });
@@ -32,7 +32,7 @@ router.get('/search', function (req, res, next) {
 router.get('/upload-video', function (req, res, next) {
   res.render('upload', {
     title: 'Upload video',
-    baseUrl: config.baseUrl
+    baseUrl: '/vquinte3/'
   });
 });
 
@@ -60,7 +60,7 @@ router.get('/my-videos', function (req, res, next) {
     res.render('myvideos', {
       title: 'My videos',
       videos: videos,
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     });
   });
 });
@@ -84,7 +84,7 @@ router.get('/edit-video', function (req, res, next){
     res.render('edit-video', {
       title: "Edit Video",
       video: video,
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     });
 
   });
@@ -112,7 +112,7 @@ router.get('/test/:id', function(req, res, next){
     res.send({
       title: 'Videos',
       video: video,
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     });
   });
 });

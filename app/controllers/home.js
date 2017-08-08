@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
     res.render('index', {
       title: 'YT2',
       articles: articles,
-      baseUrl: config.baseUrl
+      baseUrl: '/vquinte3/'
     });
   });
 });
