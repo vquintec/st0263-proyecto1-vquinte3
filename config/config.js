@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'st0263-proyecto1-vquinte3'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3003,
     db: 'mongodb://localhost/st0263-proyecto1-vquinte3-development'
   },
 
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'st0263-proyecto1-vquinte3'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3003,
     db: 'mongodb://localhost/st0263-proyecto1-vquinte3-test'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'st0263-proyecto1-vquinte3'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3003,
     db: 'mongodb://localhost/st0263-proyecto1-vquinte3-production'
   }
 };
