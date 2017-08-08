@@ -2,7 +2,7 @@
 
 <script>
   function deleteVideo(id) {
-    url = "http://localhost:3000/delete-video/" + id;
+    url = "http://10.131.137.188/vquinte3/delete-video/" + id;
     deleteRequest(url);
   }
 
@@ -26,7 +26,7 @@
 
 <h1><%-title %></h1>
 
-<a href="/upload-video">Upload video</a>
+<a href="<%- baseUrl %>upload-video">Upload video</a>
 
 
 <table border="1">
@@ -43,7 +43,7 @@
     <td><%- video.category %></td>
     <td>
       <button onclick="deleteVideo('<%- video._id %>')">Borrar</button>
-      <a href="/edit-video?id=<%- video._id %>">Editar</a>
+      <a href="<%- baseUrl %>edit-video?id=<%- video._id %>">Editar</a>
     </td>
   </tr>
   <% }); %>

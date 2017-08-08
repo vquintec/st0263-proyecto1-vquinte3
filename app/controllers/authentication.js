@@ -9,7 +9,8 @@ module.exports = function (app) {
 
 router.get('/signup', function (req, res, next) {
   res.render('signup', {
-    title: "Sign Up"
+    title: "Sign Up",
+    baseUrl: config.baseUrl
   });
 });
 
@@ -35,12 +36,14 @@ router.get('/login', function (req, res, next) {
   if(req.query.error == undefined)
     res.render('login', {
       title: 'Log In',
-      error: ''
+      error: '',
+      baseUrl: config.baseUrl
     });
   else
     res.render('login' ,{
       title: 'Log In',
-      error: 'Bad Credentials'
+      error: 'Bad Credentials',
+      baseUrl: config.baseUrl
     })
 });
 

@@ -1,9 +1,9 @@
 <% include header %>
 
 <h1><%-title %></h1>
-<a href="/videos">Videos</a>
+<a href="<%- baseUrl %>videos">Videos</a>
 
-<form action="/edit-video" method="post">
+<form action="<%- baseUrl %>edit-video" method="post">
 
   <input type="text" name="idVideo" value="<%- video._id %>" hidden >
 

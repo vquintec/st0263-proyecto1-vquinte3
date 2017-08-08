@@ -4,7 +4,7 @@
 
 <p><%- error %></p>
 
-<form action="/login" method="post">
+<form action="<%- baseUrl %>login" method="post">
 
   <label for="username">Username </label>
   <input type="text" name="username" id="username">
@@ -14,7 +14,7 @@
 
   <input type="submit" value="Log In">
 </form>
-<a href="/signup">Sign Up</a>
+<a href="<%- baseUrl %>signup">Sign Up</a>
 
 
 <% include footer %>

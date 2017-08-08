@@ -12,7 +12,8 @@ router.get('/videos', function (req, res, next) {
     if (err) return next(err);
     res.render('videos', {
       title: 'Videos',
-      videos: videos
+      videos: videos,
+      baseUrl: config.baseUrl
     });
   });
 });
@@ -22,14 +23,16 @@ router.get('/search', function (req, res, next) {
     if (err) return next(err);
     res.render('videos', {
       title: 'Videos',
-      videos: videos
+      videos: videos,
+      baseUrl: config.baseUrl
     });
   });
 });
 
 router.get('/upload-video', function (req, res, next) {
   res.render('upload', {
-    title: 'Upload video'
+    title: 'Upload video',
+    baseUrl: config.baseUrl
   });
 });
 
@@ -56,7 +59,8 @@ router.get('/my-videos', function (req, res, next) {
     if (err) return next(err);
     res.render('myvideos', {
       title: 'My videos',
-      videos: videos
+      videos: videos,
+      baseUrl: config.baseUrl
     });
   });
 });
@@ -79,7 +83,8 @@ router.get('/edit-video', function (req, res, next){
       res.send(err)
     res.render('edit-video', {
       title: "Edit Video",
-      video: video
+      video: video,
+      baseUrl: config.baseUrl
     });
 
   });
@@ -106,7 +111,8 @@ router.get('/test/:id', function(req, res, next){
     if (err) return next(err);
     res.send({
       title: 'Videos',
-      video: video
+      video: video,
+      baseUrl: config.baseUrl
     });
   });
 });

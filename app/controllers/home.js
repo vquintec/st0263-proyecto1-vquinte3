@@ -12,7 +12,8 @@ router.get('/', function (req, res, next) {
     if (err) return next(err);
     res.render('index', {
       title: 'YT2',
-      articles: articles
+      articles: articles,
+      baseUrl: config.baseUrl
     });
   });
 });
