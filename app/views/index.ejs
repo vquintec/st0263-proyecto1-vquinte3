@@ -1,22 +1,13 @@
 <% include header %>
 
-  <form action="/new-article" method="post">
-    <input type="text" name="title">
-    <input type="text" name="url">
-    <input type="text" name="text">
-    <input type="submit" value="Crear">
-  </form>
 
   <h1><%-title %></h1>
-  <p>Welcome to <%-title %></p>
+  <p>Login or Signup</p>
 
-  <% for(i = 0;i < articles.length;i++){ %>
-    <%-articles[i].title %>
-    <%-articles[i].url %>
-    <%-articles[i].text %>
-    <%-articles[i].date %>
-    <br>
-  <% } %>
+  <a href="/login">Login</a>
+
+
+  <a href="/signup">Signup</a>
 
 
 
