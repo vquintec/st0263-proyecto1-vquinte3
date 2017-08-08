@@ -27,7 +27,7 @@ router.post('/signup', function (req, res, next) {
       res.send(err);
   });
 
-  res.redirect('/login');
+  res.redirect('/vquinte3/login');
 
 });
 
@@ -52,9 +52,9 @@ router.post('/login', function (req, res, next) {
     if(err)
       res.send(err)
     if(user == null)
-      res.redirect('/login?error');
+      res.redirect('/vquinte3/login?error');
     else
-      res.redirect('/videos');
+      res.redirect('/vquinte3/videos');
 
   });
 });

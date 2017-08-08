@@ -30,7 +30,7 @@ router.post('/new-article', function (req, res, next) {
       res.send(err);
 
     //res.json({ message: newArticle.title + " created a playlist with email - " + newArticle.url + " - " + newArticle.text });
-    res.redirect('/');
+    res.redirect('/vquinte3/');
   });
 
 });

@@ -49,7 +49,7 @@ router.post('/upload-video', function (req, res, next) {
     if(err)
       res.send(err);
 
-    res.redirect('/my-videos');
+    res.redirect('/vquinte3/my-videos');
   });
 
 });
@@ -67,7 +67,7 @@ router.get('/my-videos', function (req, res, next) {
 
 
 router.get('/delete-video', function (req, res, next) {
-  res.redirect('/delete')
+  res.redirect('/vquinte3/delete')
 });
 
 router.delete('/delete-video/:id', function (req, res, next) {
