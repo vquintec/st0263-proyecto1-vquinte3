@@ -3,6 +3,8 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Article = mongoose.model('Article');
 
+var config = require('../../config/config');
+
 module.exports = function (app) {
   app.use('/', router);
 };
@@ -13,7 +15,7 @@ router.get('/', function (req, res, next) {
     res.render('index', {
       title: 'YT2',
       articles: articles,
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl + ''
     });
   });
 });
@@ -30,7 +32,7 @@ router.post('/new-article', function (req, res, next) {
       res.send(err);
 
     //res.json({ message: newArticle.title + " created a playlist with email - " + newArticle.url + " - " + newArticle.text });
-    res.redirect('/vquinte3/');
+    res.redirect(config.baseUrl + '');
   });
 
 });

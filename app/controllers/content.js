@@ -3,6 +3,7 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Video = mongoose.model('Video');
 
+var config = require('../../config/config');
 module.exports = function (app) {
   app.use('/', router);
 };
@@ -13,7 +14,7 @@ router.get('/videos', function (req, res, next) {
     res.render('videos', {
       title: 'Videos',
       videos: videos,
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl
     });
   });
 });
@@ -24,7 +25,7 @@ router.get('/search', function (req, res, next) {
     res.render('videos', {
       title: 'Videos',
       videos: videos,
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl
     });
   });
 });
@@ -32,7 +33,7 @@ router.get('/search', function (req, res, next) {
 router.get('/upload-video', function (req, res, next) {
   res.render('upload', {
     title: 'Upload video',
-    baseUrl: '/vquinte3/'
+    baseUrl: config.baseUrl
   });
 });
 
@@ -49,7 +50,7 @@ router.post('/upload-video', function (req, res, next) {
     if(err)
       res.send(err);
 
-    res.redirect('/vquinte3/my-videos');
+    res.redirect(config.baseUrl + 'my-videos');
   });
 
 });
@@ -60,14 +61,14 @@ router.get('/my-videos', function (req, res, next) {
     res.render('myvideos', {
       title: 'My videos',
       videos: videos,
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl
     });
   });
 });
 
 
 router.get('/delete-video', function (req, res, next) {
-  res.redirect('/vquinte3/delete')
+  res.redirect(config.baseUrl + 'delete')
 });
 
 router.delete('/delete-video/:id', function (req, res, next) {
@@ -84,7 +85,7 @@ router.get('/edit-video', function (req, res, next){
     res.render('edit-video', {
       title: "Edit Video",
       video: video,
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl
     });
 
   });
@@ -112,7 +113,7 @@ router.get('/test/:id', function(req, res, next){
     res.send({
       title: 'Videos',
       video: video,
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl
     });
   });
 });

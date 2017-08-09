@@ -4,7 +4,7 @@ var path = require('path'),
 
 var config = {
   development: {
-    baseUrl: "/vquinte3/",
+    baseUrl: "/",
     root: rootPath,
     app: {
       name: 'st0263-proyecto1-vquinte3'
@@ -24,13 +24,13 @@ var config = {
   },
 
   production: {
-    baseUrl: "/vquinte3/",
+    baseUrl: "/",
     root: rootPath,
     app: {
       name: 'st0263-proyecto1-vquinte3'
     },
-    port: process.env.PORT || 3003,
-    db: 'mongodb://localhost/st0263-proyecto1-vquinte3-production'
+    port: process.env.PORT || 5000,
+    db: 'mongodb://vquinte3:lenovo12@ds133670.mlab.com:33670/yt2'
   }
 };
 

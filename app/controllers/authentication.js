@@ -3,6 +3,8 @@ var express = require('express'),
   mongoose = require('mongoose'),
   User = mongoose.model('User');
 
+var config = require('../../config/config');
+
 module.exports = function (app) {
   app.use('/', router);
 };
@@ -10,7 +12,7 @@ module.exports = function (app) {
 router.get('/signup', function (req, res, next) {
   res.render('signup', {
     title: "Sign Up",
-    baseUrl: '/vquinte3/'
+    baseUrl: config.baseUrl
   });
 });
 
@@ -27,7 +29,7 @@ router.post('/signup', function (req, res, next) {
       res.send(err);
   });
 
-  res.redirect('/vquinte3/login');
+  res.redirect(config.baseUrl + 'login');
 
 });
 
@@ -37,13 +39,13 @@ router.get('/login', function (req, res, next) {
     res.render('login', {
       title: 'Log In',
       error: '',
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl
     });
   else
     res.render('login' ,{
       title: 'Log In',
       error: 'Bad Credentials',
-      baseUrl: '/vquinte3/'
+      baseUrl: config.baseUrl
     })
 });
 
@@ -52,9 +54,9 @@ router.post('/login', function (req, res, next) {
     if(err)
       res.send(err)
     if(user == null)
-      res.redirect('/vquinte3/login?error');
+      res.redirect(config.baseUrl + 'login?error');
     else
-      res.redirect('/vquinte3/videos');
+      res.redirect(config.baseUrl + 'videos');
 
   });
 });
