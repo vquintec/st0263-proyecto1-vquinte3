@@ -5,10 +5,10 @@ var express = require('express'),
 
 var config = require('../../config/config');
 module.exports = function (app) {
-  app.use('/', router);
+  app.use('/videos', router);
 };
 
-router.get('/videos', function (req, res, next) {
+router.get('/list', function (req, res, next) {
   Video.find(function (err, videos) {
     if (err) return next(err);
     res.render('videos', {

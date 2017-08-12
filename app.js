@@ -5,6 +5,9 @@ var express = require('express'),
   glob = require('glob'),
   mongoose = require('mongoose');
 
+var passport = require('passport')
+
+
 mongoose.connect(config.db);
 var db = mongoose.connection;
 db.on('error', function () {
