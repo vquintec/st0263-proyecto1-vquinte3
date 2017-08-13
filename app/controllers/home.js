@@ -3,6 +3,7 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Article = mongoose.model('Article');
 
+
 var config = require('../../config/config');
 
 module.exports = function (app) {
@@ -36,3 +37,5 @@ router.post('/new-article', function (req, res, next) {
   });
 
 });
+
+

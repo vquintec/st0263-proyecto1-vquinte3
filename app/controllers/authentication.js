@@ -11,6 +11,16 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
+router.get('/users', function (req, res, next) {
+  User.find(function (err, users) {
+    if(err) {
+      console.log(err);
+      return next();
+    }
+    res.json(users);
+  });
+});
+
 router.get('/signup', function (req, res, next) {
   res.render('signup', {
     title: "Sign Up",
@@ -30,27 +40,10 @@ router.post('/signup', function (req, res) {
     if(err)
       res.send(err);
     req.login(user, function () {
-      res.redirect('/auth/profile');
+      res.redirect('/videos');
     });
   });
 });
-
-/*router.post('/signup', function (req, res, next) {
-  user = new User({
-    name: req.body.name,
-    lastname: req.body.lastname,
-    username: req.body.username,
-    password: req.body.password
-  });
-  console.log(user);
-  user.save(function(err) {
-    if(err)
-      res.send(err);
-  });
-
-  res.redirect(config.baseUrl + 'login');
-
-});*/
 
 router.get('/login', function (req, res, next) {
     res.render('login', {
@@ -60,9 +53,9 @@ router.get('/login', function (req, res, next) {
 });
 
 router.post('/login', passport.authenticate('local', {
-  failureRedirect: '/'
+  failureRedirect: '/login'
 }), function (req, res) {
-  res.redirect('/auth/profile');
+  res.redirect('/videos');
 });
 
 

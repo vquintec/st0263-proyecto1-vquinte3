@@ -1,26 +1,28 @@
 <% include header %>
 
   <h1><%-title %></h1>
-  <a href="<%- baseUrl %>my-videos">My videos</a>
-  <a href="<%- baseUrl %>upload-video">Upload video</a>
+  <a href="<%- baseUrl %>videos/me">My videos</a>
+  <a href="<%- baseUrl %>videos/upload">Upload video</a>
 
 
-  <form action="<%- baseUrl %>search" method="get">
+  <form action="<%- baseUrl %>videos/search" method="get">
     <input type="text" name="query" placeholder="Search..."/>
     <input type="submit" value="Search" />
   </form>
 
   <table border="1">
     <tr>
-      <td>Titulo</td>
-      <td>Descripción</td>
-      <td>Categoria</td>
+      <td>Title</td>
+      <td>Description</td>
+      <td>Category</td>
+      <td>Owner</td>
     </tr>
   <% videos.forEach(function (video) { %>
     <tr>
       <td><%- video.title %></td>
       <td><%- video.description %></td>
       <td><%- video.category %></td>
+      <td><%- video.owner.username %></td>
     </tr>
   <% }); %>
   </table>

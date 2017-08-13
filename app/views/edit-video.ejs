@@ -3,7 +3,7 @@
 <h1><%-title %></h1>
 <a href="<%- baseUrl %>videos">Videos</a>
 
-<form action="<%- baseUrl %>edit-video" method="post">
+<form action="<%- baseUrl %>videos/edit" method="post">
 
   <input type="text" name="idVideo" value="<%- video._id %>" hidden >
 
@@ -19,10 +19,18 @@
   <label for="tags">Tags </label>
   <input type="text" name="tags" id="tags" value="<%- video.tags %>">
   <br>
-  <label for="username">Username </label>
-  <input type="text" name="username" id="username" value="<%- video.username %>">
-  <br>
+
+  <p>Shared With</p>
+
+  <span>
+    <% video.users.forEach(function (user) { %>
+      <%- user.username %>,
+    <% }); %>
+  </span>
+
+
   <input type="submit" value="Edit">
 </form>
 
 <% include footer %>
+

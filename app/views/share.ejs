@@ -1,0 +1,43 @@
+<% include header %>
+
+<h1><%-title %></h1>
+<a href="<%- baseUrl %>videos/me">My videos</a>
+
+<form action="<%- baseUrl %>videos/me/share" method="post">
+
+  <input type="text" name="idVideo" value="<%- video._id %>" hidden >
+
+  <label for="title">Username </label>
+  <input type="text" name="sUsername" id="sUsername" >
+  <input type="submit" value="Add"><br>
+  <%
+
+      usersInfo = '';
+      if(video.users)
+      for(i = 0;i < video.users.length;i++){
+        if(video.users.length == 1) {
+          usersInfo = video.users[i]._id;
+        } else {
+          usersInfo = video.users[i]._id + ',' + usersInfo;
+          if (i == video.users.length - 1)
+            usersInfo = usersInfo.substr(0,usersInfo.length-1);
+        }
+
+      }
+  %>
+
+  <p>Shared With</p>
+  <%
+    if(video.users)
+    video.users.forEach(function (user) { %>
+      <p><%- user.username %></p>
+  <%
+    });
+
+  %>
+
+</form>
+
+
+<% include footer %>
+

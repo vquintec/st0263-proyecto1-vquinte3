@@ -2,7 +2,7 @@
 
 <script>
   function deleteVideo(id) {
-    url = "http://10.131.137.188' + <%- baseUrl %> + 'delete-video/" + id;
+    url = "http://localhost:3003' + <%- baseUrl %> + 'videos/delete/" + id;
     deleteRequest(url);
   }
 
@@ -25,16 +25,16 @@
 </script>
 
 <h1><%-title %></h1>
-
-<a href="<%- baseUrl %>upload-video">Upload video</a>
+<a href="<%- baseUrl %>videos">Videos</a>
+<a href="<%- baseUrl %>videos/upload">Upload video</a>
 
 
 <table border="1">
   <tr>
-    <td>Titulo</td>
-    <td>Descripción</td>
-    <td>Categoria</td>
-    <td>Acciones</td>
+    <td>Title</td>
+    <td>Description</td>
+    <td>Category</td>
+    <td>Actions</td>
   </tr>
   <% videos.forEach(function (video) { %>
   <tr>
@@ -43,7 +43,8 @@
     <td><%- video.category %></td>
     <td>
       <button onclick="deleteVideo('<%- video._id %>')">Borrar</button>
-      <a href="<%- baseUrl %>edit-video?id=<%- video._id %>">Editar</a>
+      <a href="<%- baseUrl %>videos/edit?id=<%- video._id %>">Editar</a>
+      <a href="/videos/me/share?id=<%- video._id %>">Share</a>
     </td>
   </tr>
   <% }); %>
