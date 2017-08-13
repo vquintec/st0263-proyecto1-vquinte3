@@ -35,7 +35,7 @@ module.exports = function(app, config) {
   app.all('/auth/profile',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/');
+      res.redirect('/unauthorized');
     }
     next();
   });
@@ -43,7 +43,7 @@ module.exports = function(app, config) {
   app.all('/videos/upload',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/login');
+      res.redirect('/unauthorized');
     }
     next();
   });
@@ -51,7 +51,7 @@ module.exports = function(app, config) {
   app.all('/videos/me',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/login');
+      res.redirect('/unauthorized');
     }
     next();
   });
@@ -59,7 +59,7 @@ module.exports = function(app, config) {
   app.all('/videos/me/share',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/login');
+      res.redirect('/unauthorized');
     }
     next();
   });
@@ -67,7 +67,7 @@ module.exports = function(app, config) {
   app.all('/videos/shared/me',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/login');
+      res.redirect('/unauthorized');
     }
     next();
   });
@@ -75,7 +75,7 @@ module.exports = function(app, config) {
   app.all('/videos/delete',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/login');
+      res.redirect('/unauthorized');
     }
     next();
   });
@@ -83,7 +83,7 @@ module.exports = function(app, config) {
   app.all('/videos/edit',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/login');
+      res.redirect('/unauthorized');
     }
     next();
   });
