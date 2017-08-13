@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2aaf2c17-0dd4-4c7f-9fae-f744c866a4ed" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/authentication.js" afterPath="$PROJECT_DIR$/app/controllers/authentication.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/content.js" afterPath="$PROJECT_DIR$/app/controllers/content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home.js" afterPath="$PROJECT_DIR$/app/controllers/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.js" afterPath="$PROJECT_DIR$/app/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/video.js" afterPath="$PROJECT_DIR$/app/models/video.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/edit-video.ejs" afterPath="$PROJECT_DIR$/app/views/edit-video.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login.ejs" afterPath="$PROJECT_DIR$/app/views/login.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/myvideos.ejs" afterPath="$PROJECT_DIR$/app/views/myvideos.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/upload.ejs" afterPath="$PROJECT_DIR$/app/views/upload.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos.ejs" afterPath="$PROJECT_DIR$/app/views/videos.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/express.js" afterPath="$PROJECT_DIR$/config/express.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,23 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="express.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/express.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-              <folding>
-                <marker date="1502501559235" expanded="true" signature="1839:2296" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1944">
-              <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+            <state relative-caret-position="211">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -63,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/authentication.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -73,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/share.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -82,8 +61,18 @@
       <file leaf-file-name="myvideos.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/myvideos.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+            <state relative-caret-position="450">
+              <caret line="46" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sharedwme.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/sharedwme.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,27 +82,17 @@
         <entry file="file://$PROJECT_DIR$/app/views/upload.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+              <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/video.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videos.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="videos.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/videos.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="414">
+              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -174,11 +153,12 @@
         <option value="$PROJECT_DIR$/app/views/edit-video.ejs" />
         <option value="$PROJECT_DIR$/app/views/myvideos.ejs" />
         <option value="$PROJECT_DIR$/app/models/user.js" />
-        <option value="$PROJECT_DIR$/app/controllers/content.js" />
         <option value="$PROJECT_DIR$/app/views/share.ejs" />
         <option value="$PROJECT_DIR$/app/controllers/home.js" />
         <option value="$PROJECT_DIR$/app/controllers/authentication.js" />
+        <option value="$PROJECT_DIR$/app/views/sharedwme.ejs" />
         <option value="$PROJECT_DIR$/app/views/videos.ejs" />
+        <option value="$PROJECT_DIR$/app/controllers/content.js" />
       </list>
     </option>
   </component>
@@ -322,26 +302,25 @@
       <workItem from="1502297990046" duration="1602000" />
       <workItem from="1502368477471" duration="9750000" />
       <workItem from="1502494337480" duration="15568000" />
-      <workItem from="1502571085493" duration="13063000" />
+      <workItem from="1502571085493" duration="16076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83000000" />
+    <option name="totallyTimeSpent" value="86013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24491392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30637637" sideWeight="0.5031299" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30637637" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30637637" sideWeight="0.4968701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -366,20 +345,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/myvideos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/upload.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/videos.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -568,6 +533,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -660,25 +626,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/upload.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/express.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-          <folding>
-            <marker date="1502501559235" expanded="true" signature="1839:2296" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/myvideos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -691,14 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/share.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -707,10 +647,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/content.js">
+    <entry file="file://$PROJECT_DIR$/app/views/sharedwme">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="117" column="24" lean-forward="true" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -726,15 +666,57 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/authentication.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/myvideos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="46" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/share.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sharedwme.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="39" lean-forward="false" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
+          <folding>
+            <marker date="1502501559235" expanded="true" signature="1839:2296" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/videos.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="414">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -56,6 +56,38 @@ module.exports = function(app, config) {
     next();
   });
 
+  app.all('/videos/me/share',function (req, res, next) {
+    console.log('Middleware para verificar usuario');
+    if(!req.user){
+      res.redirect('/login');
+    }
+    next();
+  });
+
+  app.all('/videos/shared/me',function (req, res, next) {
+    console.log('Middleware para verificar usuario');
+    if(!req.user){
+      res.redirect('/login');
+    }
+    next();
+  });
+
+  app.all('/videos/delete',function (req, res, next) {
+    console.log('Middleware para verificar usuario');
+    if(!req.user){
+      res.redirect('/login');
+    }
+    next();
+  });
+
+  app.all('/videos/edit',function (req, res, next) {
+    console.log('Middleware para verificar usuario');
+    if(!req.user){
+      res.redirect('/login');
+    }
+    next();
+  });
+
   app.use(compress());
   app.use(express.static(config.root + '/public'));
   app.use(methodOverride());

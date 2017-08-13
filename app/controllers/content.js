@@ -15,13 +15,21 @@ router.get('/', function (req, res, next) {
     .exec(function (err, fullVideoData) {
       if (err) res.send(err);
 
-      console.log(fullVideoData);
-
       res.render('videos', {
         title: 'Videos',
         videos: fullVideoData,
         baseUrl: config.baseUrl
       });
+    });
+});
+
+router.get('/list', function (req, res, next) {
+  Video.find({ privacy: 'Public'})
+    .populate('owner')
+    .exec(function (err, fullVideoData) {
+      if (err) res.send(err);
+
+      res.json(fullVideoData);
     });
 });
 
@@ -115,6 +123,19 @@ router.post('/me/share', function (req, res, next) {
 
   //res.end();
 
+});
+
+router.get('/shared/me', function (req, res) {
+  Video.find({ users: req.user._id})
+    .populate('owner')
+    .exec(function (err, videos) {
+    if (err) res.send(err);
+    res.render('sharedwme', {
+      title: 'Shared with me',
+      videos: videos,
+      baseUrl: config.baseUrl
+    });
+  });
 });
 
 

@@ -1,0 +1,26 @@
+<% include header %>
+
+<h1><%-title %></h1>
+<a href="<%- baseUrl %>videos">Videos</a>
+<a href="<%- baseUrl %>videos/me">My videos</a>
+
+
+<table border="1">
+  <tr>
+    <td>Title</td>
+    <td>Description</td>
+    <td>Category</td>
+    <td>Owner</td>
+  </tr>
+  <% videos.forEach(function (video) { %>
+  <tr>
+    <td><%- video.title %></td>
+    <td><%- video.description %></td>
+    <td><%- video.category %></td>
+    <td><%- video.owner.username %></td>
+  </tr>
+  <% }); %>
+</table>
+
+
+<% include footer %>
