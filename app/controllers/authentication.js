@@ -22,9 +22,14 @@ router.get('/users', function (req, res, next) {
 });
 
 router.get('/signup', function (req, res, next) {
+  if(req.user){
+    res.redirect(config.baseUrl);
+    return next();
+  }
   res.render('signup', {
     title: "Sign Up",
-    baseUrl: config.baseUrl
+    baseUrl: config.baseUrl,
+    userInfo: userInfo
   });
 });
 
@@ -46,6 +51,10 @@ router.post('/signup', function (req, res) {
 });
 
 router.get('/login', function (req, res, next) {
+    if(req.user){
+      res.redirect(config.baseUrl);
+      return next();
+    }
     res.render('login', {
       title: 'Log In',
       baseUrl: config.baseUrl
@@ -55,13 +64,11 @@ router.get('/login', function (req, res, next) {
 router.post('/login', passport.authenticate('local', {
   failureRedirect: '/login'
 }), function (req, res) {
-  res.redirect('/videos');
+  res.redirect(config.baseUrl + 'videos');
 });
 
 
-router.get('/auth/profile', function (req, res) {
-    console.log('PROFILE');
-    res.json(req.user);
-
+router.get('/logout', function (req, res) {
+  req.logout();
+  res.redirect(config.baseUrl + 'videos');
 });
-

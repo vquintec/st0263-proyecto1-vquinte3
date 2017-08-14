@@ -15,10 +15,19 @@ router.get('/', function (req, res, next) {
     .exec(function (err, fullVideoData) {
       if (err) res.send(err);
 
+      userInfo = undefined;
+      if(req.user){
+        userInfo = {
+          name: req.user.name,
+          username: req.user.username,
+        }
+      }
+
       res.render('videos', {
         title: 'Videos',
         videos: fullVideoData,
-        baseUrl: config.baseUrl
+        baseUrl: config.baseUrl,
+        userInfo: userInfo
       });
     });
 });
@@ -35,7 +44,7 @@ router.get('/list', function (req, res, next) {
 
 router.get('/search', function (req, res, next) {
   Video.find({title:new RegExp(req.query.query)},function(err, videos) {
-    if (err) return next(err);
+    if (err) res.send(err);
     res.render('videos', {
       title: 'Videos',
       videos: videos,
@@ -72,12 +81,18 @@ router.post('/upload', function (req, res, next) {
 });
 
 router.get('/me', function (req, res, next) {
+  userInfo = {
+    name: req.user.name,
+    username: req.user.username,
+  }
   Video.find({ owner: req.user._id}, function (err, videos) {
     if (err) res.send(err);
     res.render('myvideos', {
       title: 'My videos',
       videos: videos,
-      baseUrl: config.baseUrl
+      baseUrl: config.baseUrl,
+      userInfo: userInfo,
+      ip: config.ip
     });
   });
 });
@@ -102,7 +117,7 @@ router.post('/me/share', function (req, res, next) {
 
   User.findOne({ username: req.body.sUsername }, function (err, user) {
     if (err || !user) {
-      res.redirect('/videos/me/share?id=598e576469fb9a15ce95972e&error');
+      res.redirect(config.baseUrl + 'videos/me/share?id=598e576469fb9a15ce95972e&error');
       return next();
     }
     else {
@@ -111,10 +126,10 @@ router.post('/me/share', function (req, res, next) {
       Video.findByIdAndUpdate(req.body.idVideo, { $addToSet: {users : user._id}}, function (err, video) {
         if (err){
           console.log("Error: " + err);
-          res.redirect('/videos/me/share?id=598e576469fb9a15ce95972e&error2');
+          res.redirect(config.baseUrl + 'videos/me/share?id=598e576469fb9a15ce95972e&error2');
           return next();
         }
-        res.redirect('/videos/me');
+        res.redirect(config.baseUrl + 'videos/me');
         return next();
       });
     }
@@ -174,7 +189,7 @@ router.post('/edit', function (req, res, next) {
 
   Video.findByIdAndUpdate(req.body.idVideo, { $set: videoUpdated}, { new: true }, function (err, video) {
     if (err) res.send(err);
-    res.redirect('/videos/me')
+    res.redirect(config.baseUrl + 'videos/me')
   });
 });
 

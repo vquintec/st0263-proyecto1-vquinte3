@@ -11,14 +11,7 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  Article.find(function (err, articles) {
-    if (err) return next(err);
-    res.render('index', {
-      title: 'YT2',
-      articles: articles,
-      baseUrl: config.baseUrl + ''
-    });
-  });
+  res.redirect(config.baseUrl + 'videos');
 });
 
 router.get('/unauthorized', function (req, res, next) {

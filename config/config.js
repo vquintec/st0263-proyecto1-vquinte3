@@ -5,6 +5,7 @@ var path = require('path'),
 var config = {
   development: {
     baseUrl: "/",
+    ip: "localhost",
     root: rootPath,
     app: {
       name: 'st0263-proyecto1-vquinte3'
@@ -15,6 +16,7 @@ var config = {
 
   test: {
     baseUrl: "/vquinte3/",
+    ip: "10.131.137.188",
     root: rootPath,
     app: {
       name: 'st0263-proyecto1-vquinte3'
@@ -25,6 +27,7 @@ var config = {
 
   production: {
     baseUrl: "/",
+    ip: "10.131.137.188",
     root: rootPath,
     app: {
       name: 'st0263-proyecto1-vquinte3'

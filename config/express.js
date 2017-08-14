@@ -12,6 +12,8 @@ var passport = require('passport');
 
 var session = require('express-session');
 
+var config = require('./config');
+
 
 module.exports = function(app, config) {
   var env = process.env.NODE_ENV || 'development';
@@ -32,58 +34,59 @@ module.exports = function(app, config) {
 
   require('./passport')(app);
 
-  app.all('/auth/profile',function (req, res, next) {
+  app.all(config.baseUrl + 'auth/profile',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/unauthorized');
+      res.redirect(config.baseUrl + 'unauthorized');
     }
     next();
   });
 
-  app.all('/videos/upload',function (req, res, next) {
+  app.all(config.baseUrl + 'videos/upload',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/unauthorized');
+      res.redirect(config.baseUrl + 'unauthorized');
     }
     next();
   });
 
-  app.all('/videos/me',function (req, res, next) {
+  app.all(config.baseUrl + 'videos/me',function (req, res, next) {
     console.log('Middleware para verificar usuario');
+    console.log("Roooooooooot " + config.root);
     if(!req.user){
-      res.redirect('/unauthorized');
+      res.redirect(config.baseUrl + 'unauthorized');
     }
     next();
   });
 
-  app.all('/videos/me/share',function (req, res, next) {
+  app.all(config.baseUrl + 'videos/me/share',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/unauthorized');
+      res.redirect(config.baseUrl + 'unauthorized');
     }
     next();
   });
 
-  app.all('/videos/shared/me',function (req, res, next) {
+  app.all(config.baseUrl + 'videos/shared/me',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/unauthorized');
+      res.redirect(config.baseUrl + 'unauthorized');
     }
     next();
   });
 
-  app.all('/videos/delete',function (req, res, next) {
+  app.all(config.baseUrl + 'videos/delete',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/unauthorized');
+      res.redirect(config.baseUrl + 'unauthorized');
     }
     next();
   });
 
-  app.all('/videos/edit',function (req, res, next) {
+  app.all(config.baseUrl + 'videos/edit',function (req, res, next) {
     console.log('Middleware para verificar usuario');
     if(!req.user){
-      res.redirect('/unauthorized');
+      res.redirect(config.baseUrl + 'unauthorized');
     }
     next();
   });
