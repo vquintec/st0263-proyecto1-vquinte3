@@ -154,10 +154,13 @@ router.get('/shared/me', function (req, res) {
 });
 
 
-router.delete('/delete/:id', function (req, res, next) {
+router.get('/delete/:id', function (req, res, next) {
   Video.findByIdAndRemove(req.params.id, function (err, video) {
-    if(err) return next(err);
-    res.end("Se elimino " + req.params.id);
+    if(err) {
+      res.redirect(config.baseUrl + 'videos/me?err');
+      return next(err);
+    }
+    res.redirect(config.baseUrl + 'videos/me');
   });
 });
 
